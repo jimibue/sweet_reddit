@@ -6,12 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-s = Sub.create(name: "Sub1")
+2.times do |i|
+  s = Sub.create(name: "Sub #{i}")
 
-s.topics.create(name: "Topic 1", body: "here is the body")
-s.topics.create(name: "Topic 2", body: "here is the body")
+  s.topics.create(name: "Topic 1", body: "here is the body")
+  s.topics.create(name: "Topic 2", body: "here is the body")
 
-puts "seeded"
-puts s.topics
+  puts "seeded"
+  puts s.topics
+end
 
 # Sub.last.topics
